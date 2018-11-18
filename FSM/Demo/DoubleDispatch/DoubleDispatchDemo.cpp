@@ -84,27 +84,29 @@ DemoStateBase::OnEventReturnType DemoStateB::OnEvent(const DemoEventB& e)
 
 int main()
 {
-	FSM<DemoStateBase> Engine(DemoStateA{});
+	{
+		FSM<DemoStateBase> Engine(DemoStateA{});
 
-	std::cout << "=== Dispatching DemoEventB ===\n";
+		std::cout << "=== Dispatching DemoEventB ===\n";
 
-	Engine.Dispatch(DemoEventB{5.2f});
+		Engine.Dispatch(DemoEventB{ 5.2f });
 
-	std::cout << "=== Dispatching DemoEventA ===\n";
+		std::cout << "=== Dispatching DemoEventA ===\n";
 
-	Engine.Dispatch(DemoEventA{3});
+		Engine.Dispatch(DemoEventA{ 3 });
 
-	std::cout << "=== Dispatching DemoEventB ===\n";
+		std::cout << "=== Dispatching DemoEventB ===\n";
 
-	Engine.Dispatch(DemoEventB{8.9f});
+		Engine.Dispatch(DemoEventB{ 8.9f });
 
-	std::cout << "=== Dispatching DemoEventB ===\n";
+		std::cout << "=== Dispatching DemoEventB ===\n";
 
-	Engine.Dispatch(DemoEventB{0.4f});
+		Engine.Dispatch(DemoEventB{ 0.4f });
 
-	std::cout << "=== Dispatching DemoEventA ===\n";
+		std::cout << "=== Dispatching DemoEventA ===\n";
 
-	Engine.Dispatch(DemoEventA{62});
+		Engine.Dispatch(DemoEventA{ 62 });
+	}
 
 	system("pause");
 

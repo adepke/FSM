@@ -23,6 +23,11 @@ namespace Variant
 			std::visit([](auto& VariantState) { VariantState.OnEnter(); }, ActiveState);
 		}
 
+		~FSM()
+		{
+			std::visit([](auto& VariantState) { VariantState.OnExit(); }, ActiveState);
+		}
+
 		template <typename EventType>
 		void Dispatch(EventType&& e)
 		{

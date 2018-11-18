@@ -23,6 +23,11 @@ namespace SingleDispatch
 			ActiveState->OnEnter();
 		}
 
+		~FSM()
+		{
+			ActiveState->OnExit();
+		}
+
 		template <typename EventType>
 		void Dispatch(EventType e)
 		{
