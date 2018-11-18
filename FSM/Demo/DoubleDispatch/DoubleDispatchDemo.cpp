@@ -1,3 +1,6 @@
+/*
+	Copyright (c) 2018 Andrew Depke
+*/
 #include "../../Include/DoubleDispatch/FSM.h"
 
 #include <iostream>
