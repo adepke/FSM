@@ -26,7 +26,7 @@ namespace SingleDispatch
 	public:
 		State() = default;
 		State(const State&) = delete;
-		State(State&&) = default;
+		State(State&&) noexcept = default;
 		virtual ~State() = default;
 
 		State& operator=(const State&) = delete;

@@ -14,7 +14,7 @@ namespace DoubleDispatch
 	{
 		Event() = default;
 		Event(const Event&) = delete;
-		Event(Event&&) = default;
+		Event(Event&&) noexcept = default;
 		virtual ~Event() = default;
 
 		Event& operator=(const Event&) = delete;
